@@ -1,6 +1,6 @@
 # Benchmarking DeepFold
 
-Welcome to the repository dedicated to run all tests that performed in Deepfold.
+Welcome to the repository dedicated to run all tests that performed in Deepfold. This repository is built on top of [PolyFRIM](https://github.com/gyp2847399255/PolyFRIM.git). We also benchmark SNARKs using [Libra](https://github.com/X9h5Z7g2bK1/Libra.git) and [HyperPlonk](https://github.com/X9h5Z7g2bK1/Deepfold-hyperplonk.git).
 
 ## Overview
 
@@ -36,14 +36,11 @@ This repository facilitates benchmarking tests for Deepfold.
 ├── util # Utilities
 │   ├── Cargo.toml
 │   └── src
-├── virgo # Virgo Benchmark
-│   ├── Cargo.toml
-│   ├── bench_gkr.py
-│   ├── benches
-│   └── src
-└── vss # WIP
-    ├── Cargo.toml
-    └── src
+└── virgo # Virgo Benchmark
+    ├── Cargo.toml
+    ├── bench_gkr.py
+    ├── benches
+    └── src
 ```
 
 ### Implementation
@@ -54,7 +51,6 @@ DeepFold is implemented using $\mathbb{F}_{p^2}$, with $p = 2^{61} - 1$ as the b
   - **Batch Variant of DeepFold**: The Batch evaluation version of DeepFold proposed in paper. Find this in the `batch/` directory.
   - **Other FRI-based Multi-linears**:
     - BaseFold in `basefold/` directory
-    - FRI in `fri/` directory
     - PolyFRIM in `polyfrim/` directory
     - Virgo in `virgo/` directory
   <!-- - **VSS**: One to many univariate polynomial commitment from PolyFRIM, located in the `vss/` directory.
@@ -92,11 +88,6 @@ DeepFold is implemented using $\mathbb{F}_{p^2}$, with $p = 2^{61} - 1$ as the b
 ```
 
 > **Note**: The most extensive benchmarking point may require approximately 50 GB of RAM.
-
--- **Change the Size of Polynomials**
-```bash
-./scripts/set-size.sh 15
-```
 
 - **Benchmark All Protocols**: 
   ```bash
